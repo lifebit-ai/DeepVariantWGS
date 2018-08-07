@@ -1,6 +1,6 @@
 # DeepVariant as a Nextflow pipeline
 
-A Nextflow pipeline for running the [Google DeepVariant variant caller](https://github.com/google/deepvariant).
+A Nextflow pipeline for running the WGS version of [Google DeepVariant variant caller](https://github.com/google/deepvariant).
 
 At [Lifebit](https://lifebit.ai/?utm_campaign=documentation&utm_source=github&utm_medium=web) we developed this pipeline to ease and reduce cost for variant calling analyses. You can test the pipeline through our Platform: [Deploit](https://deploit.lifebit.ai/app/home). This allows you to run Deepvariant over cloud in a matter of a couple of clicks: and for single users our service is completely free! 
 
@@ -52,14 +52,6 @@ nextflow run main.nf --hg19 --bam_folder "s3://deepvariant-data/test-bam/"
 ```
 In this case variants are called on the two bam files contained in the lifebit-test-data/bam s3 bucket. The hg19 version of the reference genome is used.
 Two vcf files are produced and can be found in the folder "RESULTS-DeepVariant"
-
-
-A typical run on **whole exome data** looks like this: 
-```
-git clone https://github.com/lifebit-ai/DeepVariant
-cd DeepVariant
-nextflow run main.nf --exome --hg19 --bam_folder myBamFolder --bed myBedFile"
-```
 
 
 ## More about the pipeline 
